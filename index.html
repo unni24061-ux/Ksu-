@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KSU | Student Manifesto</title>
+
+
+    <!-- =========================================
+         GOOGLE FONTS
+    ========================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manjari:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================
+         CSS
+    ========================================== -->
+
+    <style>
+
+        /* ================================
+           RESET
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* ================================
+           BODY
+        ================================= */
+
+        body {
+
+            font-family: "Inter", sans-serif;
+
+            background: #f3f7fc;
+
+            color: #172b4d;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 12px;
+        }
+
+
+        /* ================================
+           CONTAINER
+        ================================= */
+
+        .container {
+
+            width: 100%;
+
+            max-width: 620px;
+        }
+
+
+        /* ================================
+           MAIN CARD
+        ================================= */
+
+        .card {
+
+            width: 100%;
+
+            background: #ffffff;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 35px
+                rgba(0, 65, 140, 0.12);
+        }
+
+
+        /* ================================
+           HERO
+        ================================= */
+
+        .hero {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 315px;
+
+            overflow: hidden;
+
+            background: #0757b5;
+        }
+
+
+        .hero img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        /* Dark blue gradient */
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(0, 35, 90, 0.03),
+                    rgba(0, 25, 70, 0.90)
+                );
+        }
+
+
+        /* ================================
+           HERO CONTENT
+        ================================= */
+
+        .hero-content {
+
+            position: absolute;
+
+            z-index: 2;
+
+            left: 25px;
+
+            right: 25px;
+
+            bottom: 24px;
+
+            color: #ffffff;
+        }
+
+
+        .hero-brand {
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* Malayalam title */
+
+        .hero-title {
+
+            font-family: "Manjari", sans-serif;
+
+            font-size: 35px;
+
+            font-weight: 700;
+
+            line-height: 1.2;
+
+            margin-bottom: 4px;
+
+            text-shadow:
+                0 2px 10px
+                rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* Malayalam description */
+
+        .hero-subtitle {
+
+            font-family: "Manjari", sans-serif;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            line-height: 1.5;
+
+            opacity: 0.95;
+
+            text-shadow:
+                0 1px 5px
+                rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* ================================
+           FORM SECTION
+        ================================= */
+
+        .form-section {
+
+            padding: 28px;
+        }
+
+
+        /* ================================
+           ANONYMOUS BOX
+        ================================= */
+
+        .anonymous-box {
+
+            width: 100%;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 15px;
+
+            margin-bottom: 24px;
+
+            background: #f1f7ff;
+
+            border: 1px solid #d8e7fa;
+
+            border-radius: 11px;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+        }
+
+
+        .anonymous-box:hover {
+
+            background: #eaf3ff;
+
+            border-color: #c5daf5;
+        }
+
+
+        /* Checkbox */
+
+        .anonymous-box input {
+
+            width: 18px;
+
+            height: 18px;
+
+            margin: 0;
+
+            flex-shrink: 0;
+
+            accent-color: #0757b5;
+
+            cursor: pointer;
+        }
+
+
+        /* Anonymous text */
+
+        .anonymous-text {
+
+            flex: 1;
+        }
+
+
+        .anonymous-text strong {
+
+            display: block;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: #17365f;
+
+            margin-bottom: 3px;
+        }
+
+
+        .anonymous-text span {
+
+            display: block;
+
+            font-size: 11px;
+
+            line-height: 1.5;
+
+            color: #718096;
+        }
+
+
+        /* ================================
+           FORM FIELD
+        ================================= */
+
+        .field {
+
+            margin-bottom: 19px;
+        }
+
+
+        label {
+
+            display: block;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+
+            color: #263957;
+        }
+
+
+        /* ================================
+           INPUTS
+        ================================= */
+
+        input[type="text"],
+        input[type="tel"],
+        textarea {
+
+            width: 100%;
+
+            border: 1px solid #d7dfeb;
+
+            border-radius: 10px;
+
+            padding: 13px 14px;
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 14px;
+
+            color: #172b4d;
+
+            background: #fbfcfe;
+
+            outline: none;
+
+            transition: 0.2s ease;
+        }
+
+
+        input[type="text"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+
+            border-color: #0757b5;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(7, 87, 181, 0.08);
+        }
+
+
+        input::placeholder,
+        textarea::placeholder {
+
+            color: #a1acba;
+        }
+
+
+        /* ================================
+           TEXTAREA
+        ================================= */
+
+        textarea {
+
+            min-height: 155px;
+
+            resize: vertical;
+
+            line-height: 1.6;
+        }
+
+
+        /* ================================
+           SUBMIT BUTTON
+        ================================= */
+
+        button {
+
+            width: 100%;
+
+            border: none;
+
+            border-radius: 10px;
+
+            padding: 14px;
+
+            background: #0757b5;
+
+            color: #ffffff;
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+        }
+
+
+        button:hover {
+
+            background: #064996;
+
+            transform: translateY(-1px);
+        }
+
+
+        button:active {
+
+            transform: translateY(0);
+        }
+
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        .footer-note {
+
+            text-align: center;
+
+            margin-top: 15px;
+
+            font-size: 11px;
+
+            color: #8995a5;
+
+            line-height: 1.5;
+        }
+
+
+        /* ================================
+           SUCCESS SCREEN
+        ================================= */
+
+        .success {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 45px 25px;
+        }
+
+
+        .success-icon {
+
+            width: 56px;
+
+            height: 56px;
+
+            margin: 0 auto 18px;
+
+            border-radius: 50%;
+
+            background: #e8f3ff;
+
+            color: #0757b5;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 25px;
+
+            font-weight: 800;
+        }
+
+
+        .success h2 {
+
+            font-size: 22px;
+
+            margin-bottom: 8px;
+
+            color: #172b4d;
+        }
+
+
+        .success p {
+
+            color: #697789;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+
+        /* ================================
+           HIDDEN
+        ================================= */
+
+        .hidden {
+
+            display: none !important;
+        }
+
+
+        /* ================================
+           MOBILE
+        ================================= */
+
+        @media (max-width: 500px) {
+
+            body {
+
+                padding: 8px;
+            }
+
+
+            .card {
+
+                border-radius: 15px;
+            }
+
+
+            .hero {
+
+                height: 285px;
+            }
+
+
+            .hero-content {
+
+                left: 20px;
+
+                right: 20px;
+
+                bottom: 20px;
+            }
+
+
+            .hero-title {
+
+                font-size: 30px;
+            }
+
+
+            .hero-subtitle {
+
+                font-size: 16px;
+            }
+
+
+            .form-section {
+
+                padding: 21px;
+            }
+        }
+
+
+        /* ================================
+           SMALL PHONES
+        ================================= */
+
+        @media (max-width: 360px) {
+
+            .hero {
+
+                height: 260px;
+            }
+
+
+            .hero-title {
+
+                font-size: 27px;
+            }
+
+
+            .hero-subtitle {
+
+                font-size: 15px;
+            }
+
+
+            .form-section {
+
+                padding: 17px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         MAIN CONTAINER
+    ========================================== -->
+
+    <div class="container">
+
+
+        <div class="card">
+
+
+            <!-- =================================
+                 HERO / POSTER
+            ================================== -->
+
+            <div class="hero">
+
+
+                <!--
+                    IMPORTANT:
+
+                    Rename your uploaded poster to:
+
+                    ksu-poster.jpg
+
+                    Keep it in the same folder
+                    as this index.html file.
+                -->
+
+                <img
+                    src="ksu-poster.jpg"
+                    alt="KSU Campaign"
+                >
+
+
+                <div class="hero-content">
+
+
+                    <div class="hero-brand">
+                        KSU
+                    </div>
+
+
+                    <!-- ONLY MALAYALAM TITLE -->
+
+                    <div class="hero-title">
+                        നമ്മുടെ മാനിഫെസ്റ്റോ
+                    </div>
+
+
+                    <!-- ONLY MALAYALAM DESCRIPTION -->
+
+                    <div class="hero-subtitle">
+                        KSU സ്ഥാനാർത്ഥികളെ വിജയിപ്പിക്കുക
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 FORM SECTION
+            ================================== -->
+
+            <div class="form-section">
+
+
+                <form id="manifestoForm">
+
+
+                    <!-- =================================
+                         ANONYMOUS OPTION
+                    ================================== -->
+
+                    <label
+                        class="anonymous-box"
+                        for="anonymous"
+                    >
+
+
+                        <input
+                            type="checkbox"
+                            id="anonymous"
+                        >
+
+
+                        <div class="anonymous-text">
+
+
+                            <strong>
+                                Submit anonymously
+                            </strong>
+
+
+                            <span>
+                                Your name, class and phone number won't be submitted.
+                            </span>
+
+
+                        </div>
+
+
+                    </label>
+
+
+
+                    <!-- =================================
+                         PERSONAL DETAILS
+                    ================================== -->
+
+                    <div id="personalDetails">
+
+
+                        <!-- NAME -->
+
+                        <div class="field">
+
+
+                            <label for="name">
+                                Name
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Name"
+                                autocomplete="name"
+                            >
+
+
+                        </div>
+
+
+
+                        <!-- CLASS -->
+
+                        <div class="field">
+
+
+                            <label for="class">
+                                Class
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="class"
+                                placeholder="Class"
+                            >
+
+
+                        </div>
+
+
+
+                        <!-- PHONE -->
+
+                        <div class="field">
+
+
+                            <label for="phone">
+                                Phone
+                            </label>
+
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Phone"
+                                autocomplete="tel"
+                            >
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         SUGGESTION
+                    ================================== -->
+
+                    <div class="field">
+
+
+                        <label for="suggestion">
+                            Your Suggestion
+                        </label>
+
+
+                        <textarea
+                            id="suggestion"
+                            placeholder="Write your suggestion..."
+                            required
+                        ></textarea>
+
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         SUBMIT
+                    ================================== -->
+
+                    <button
+                        type="submit"
+                    >
+                        Submit Manifesto
+                    </button>
+
+
+                    <div class="footer-note">
+
+                        Every suggestion matters.
+                        Help us build a better campus.
+
+                    </div>
+
+
+                </form>
+
+
+
+                <!-- =================================
+                     SUCCESS
+                ================================== -->
+
+                <div
+                    class="success"
+                    id="success"
+                >
+
+
+                    <div class="success-icon">
+                        ✓
+                    </div>
+
+
+                    <h2>
+                        Thank You!
+                    </h2>
+
+
+                    <p>
+                        Your suggestion has been received.
+                        <br>
+                        Your voice can help shape our campus.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+
+        /* =================================
+           GET ELEMENTS
+        ================================== */
+
+        const anonymousCheckbox =
+            document.getElementById("anonymous");
+
+
+        const personalDetails =
+            document.getElementById("personalDetails");
+
+
+        const form =
+            document.getElementById("manifestoForm");
+
+
+        const success =
+            document.getElementById("success");
+
+
+
+        /* =================================
+           ANONYMOUS TOGGLE
+        ================================== */
+
+        anonymousCheckbox.addEventListener(
+            "change",
+            function () {
+
+
+                if (this.checked) {
+
+
+                    /*
+                     * Hide Name, Class and Phone
+                     */
+
+                    personalDetails.classList.add(
+                        "hidden"
+                    );
+
+
+                    /*
+                     * Clear all personal details
+                     */
+
+                    document.getElementById(
+                        "name"
+                    ).value = "";
+
+
+                    document.getElementById(
+                        "class"
+                    ).value = "";
+
+
+                    document.getElementById(
+                        "phone"
+                    ).value = "";
+
+
+                } else {
+
+
+                    /*
+                     * Show personal details
+                     */
+
+                    personalDetails.classList.remove(
+                        "hidden"
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        /* =================================
+           FORM SUBMIT
+        ================================== */
+
+        form.addEventListener(
+            "submit",
+            function (event) {
+
+
+                /*
+                 * Stop normal page reload
+                 */
+
+                event.preventDefault();
+
+
+
+                /* =============================
+                   GET SUGGESTION
+                ============================== */
+
+                const suggestion =
+                    document
+                    .getElementById("suggestion")
+                    .value
+                    .trim();
+
+
+
+                /*
+                 * Check suggestion
+                 */
+
+                if (suggestion === "") {
+
+                    alert(
+                        "Please enter your suggestion."
+                    );
+
+                    return;
+                }
+
+
+
+                /* =============================
+                   CHECK ANONYMOUS
+                ============================== */
+
+                const isAnonymous =
+                    anonymousCheckbox.checked;
+
+
+
+                /* =============================
+                   CREATE SUBMISSION
+                ============================== */
+
+                const submission = {
+
+
+                    name:
+                        isAnonymous
+                        ? ""
+                        :
+                        document
+                        .getElementById("name")
+                        .value
+                        .trim(),
+
+
+                    class:
+                        isAnonymous
+                        ? ""
+                        :
+                        document
+                        .getElementById("class")
+                        .value
+                        .trim(),
+
+
+                    phone:
+                        isAnonymous
+                        ? ""
+                        :
+                        document
+                        .getElementById("phone")
+                        .value
+                        .trim(),
+
+
+                    suggestion:
+                        suggestion,
+
+
+                    anonymous:
+                        isAnonymous,
+
+
+                    submittedAt:
+                        new Date().toISOString()
+
+                };
+
+
+
+                /* =============================
+                   LOCAL STORAGE
+                ============================== */
+
+                /*
+                 * This is for testing only.
+                 *
+                 * Actual submissions will need
+                 * a backend / Google Sheet.
+                 */
+
+                let submissions =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "ksuManifestos"
+                        )
+                    ) || [];
+
+
+                submissions.push(
+                    submission
+                );
+
+
+                localStorage.setItem(
+                    "ksuManifestos",
+                    JSON.stringify(
+                        submissions
+                    )
+                );
+
+
+
+                /* =============================
+                   SHOW SUCCESS
+                ============================== */
+
+                form.style.display = "none";
+
+                success.style.display = "block";
+
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
